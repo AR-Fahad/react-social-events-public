@@ -1,14 +1,35 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
+  const { userSignIn, xProvider } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    userSignIn(email, password)
+      .then()
+      .catch((err) => console.log(err));
+  };
+  const googleSignIn = () => {
+    xProvider(googleProvider)
+      .then()
+      .catch((err) => console.log(err));
+  };
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200 text-white">
       <div className="text-center pt-10">
         <h3 className="text-white text-center text-2xl font-semibold">
           Sign In With
         </h3>
         <br />
-        <button className="btn btn-link text-blue-700 border-none text-2xl font-semibold">
+        <button
+          onClick={googleSignIn}
+          className="btn btn-link text-blue-700 border-none text-2xl font-semibold"
+        >
           Google
         </button>
       </div>
@@ -19,7 +40,7 @@ const Login = () => {
       <div className="hero bg-base-200 pb-5">
         <div className="hero-content w-3/4">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleSignIn} className="card-body">
               <h3 className="text-white text-center text-2xl font-semibold">
                 Account
               </h3>
