@@ -1,6 +1,17 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import "../Style/style.css";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import profile from "../assets/profile.jpg";
 const Navbar = () => {
+  const { user, userSignOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    userSignOut()
+      .then()
+      .catch((err) => console.log(err));
+  };
+
   const navLinks = (
     <>
       <li>
@@ -54,12 +65,31 @@ const Navbar = () => {
             <ul className="menu-horizontal gap-10 px-1">{navLinks}</ul>
           </div>
           <div className="navbar-end">
-            <Link
-              to="/login"
-              className="btn btn-sm bg-blue-700 text-white border-none"
-            >
-              Sign in
-            </Link>
+            {user ? (
+              <div className="flex items-center gap-2">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL ? user.photoURL : profile} />
+                  </div>
+                </label>
+                <p className="font-semibold">{user?.displayName}</p>
+                <div>
+                  <button
+                    onClick={handleSignOut}
+                    className="btn btn-sm bg-blue-700 text-white border-none"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="btn btn-sm bg-blue-700 text-white border-none"
+              >
+                Sign in
+              </Link>
+            )}
           </div>
         </div>
         <Outlet></Outlet>
