@@ -8,6 +8,7 @@ import Login from "./Login/Login";
 import Register from "./Register/Register";
 import CardDetails from "./CardDetails/CardDetails";
 import AuthProvider from "./AuthProvider/AuthProvider";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/event/:Id",
-        element: <CardDetails></CardDetails>,
+        element: (
+          <PrivateRoute>
+            <CardDetails></CardDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/socialevents.json"),
       },
       {

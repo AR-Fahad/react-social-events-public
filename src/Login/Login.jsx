@@ -1,22 +1,24 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
   const { userSignIn, xProvider } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
   const handleSignIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     userSignIn(email, password)
-      .then()
+      .then(() => navigate(location?.state ? location.state : "/"))
       .catch((err) => console.log(err));
   };
   const googleSignIn = () => {
     xProvider(googleProvider)
-      .then()
+      .then(() => navigate(location?.state ? location.state : "/"))
       .catch((err) => console.log(err));
   };
   return (
