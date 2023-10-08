@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "event": "Wedding",
+    "description": "A joyous celebration of the union of two people in love.",
+    "venue": "Luxury Wedding Venue",
+    "guests": 150,
+    "cost": "$25,000",
+    "img": "https://i.ibb.co/Jrv1xY5/wedding.jpg"
+  },
+  {
+    "id": 2,
+    "event": "Birthday Party",
+    "description": "A fun-filled gathering to celebrate a special person's birthday.",
+    "venue": "Backyard or Event Hall",
+    "guests": 30,
+    "cost": "$1,000",
+    "img": "https://i.ibb.co/1GYBmzw/birthday.jpg"
+  },
+  {
+    "id": 3,
+    "event": "Anniversary",
+    "description": "A heartfelt commemoration of years spent together as a couple.",
+    "venue": "Romantic Restaurant",
+    "guests": 50,
+    "cost": "$5,000",
+    "img": "https://i.ibb.co/XkbMvHV/anniversary.jpg"
+  },
+  {
+    "id": 4,
+    "event": "Engagement Party",
+    "description": "A pre-wedding celebration to announce and toast to an engagement.",
+    "venue": "Cocktail Lounge",
+    "guests": 60,
+    "cost": "$2,000",
+    "img": "https://i.ibb.co/0FTBygk/engagement.jpg"
+  },
+  {
+    "id": 5,
+    "event": "Retirement Party",
+    "description": "A farewell event honoring someone's retirement from their career.",
+    "venue": "Community Center",
+    "guests": 80,
+    "cost": "$3,000",
+    "img": "https://i.ibb.co/pjRtSwK/retirement.jpg"
+  },
+  {
+    "id": 6,
+    "event": "Baby Shower",
+    "description": "A delightful gathering to celebrate an upcoming addition to the family.",
+    "venue": "Friend's Home or Event Space",
+    "guests": 20,
+    "cost": "$500",
+    "img": "https://i.ibb.co/Prw3Crk/babyshower.jpg"
+  }
+]
