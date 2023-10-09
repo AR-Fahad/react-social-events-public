@@ -4,7 +4,7 @@ import Slider from "./Slider";
 const Home = () => {
   const events = useLoaderData();
   return (
-    <div>
+    <div className="w-full">
       <Slider></Slider>
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
@@ -76,24 +76,26 @@ const Home = () => {
         />
       </div>
       <br />
-      <div
-        data-aos="fade-right"
-        data-aos-duration="3000"
-        className="w-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 py-10 mx-auto"
-      >
-        <h3 className="text-xl md:text-5xl text-white font-bold text-center">
-          To know more
-        </h3>
-      </div>
-      <br />
-      <div
-        data-aos="fade-left"
-        data-aos-duration="3000"
-        className="w-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 py-10 mx-auto"
-      >
-        <h3 className="text-xl md:text-5xl text-white font-bold text-center">
-          Explore more
-        </h3>
+      <div>
+        <div
+          data-aos="fade-right"
+          data-aos-duration="3000"
+          className="w-1/3 md:w-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 py-3 md:py-8 mx-auto"
+        >
+          <h3 className="text-xl md:text-5xl text-white font-bold text-center">
+            To know more
+          </h3>
+        </div>
+        <br />
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          className="w-1/3 md:w-1/2 bg-gradient-to-r from-sky-500 to-indigo-500 py-3 md:py-8 mx-auto"
+        >
+          <h3 className="text-xl md:text-5xl text-white font-bold text-center">
+            Explore more
+          </h3>
+        </div>
       </div>
     </div>
   );
