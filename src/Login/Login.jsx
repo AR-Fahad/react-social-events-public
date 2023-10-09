@@ -14,7 +14,10 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     userSignIn(email, password)
-      .then(() => navigate(location?.state ? location.state : "/"))
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
+        e.target.reset();
+      })
       .catch((err) => console.log(err));
   };
   const googleSignIn = () => {
