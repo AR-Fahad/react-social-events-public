@@ -68,7 +68,7 @@ const Home = () => {
         ))}
       </div>
       <br />
-      <div>
+      <div data-aos="zoom-in" data-aos-duration="3000">
         <img
           className="w-full"
           src="https://i.ibb.co/znHVkbs/upcoming.png"
