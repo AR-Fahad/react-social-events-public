@@ -9,11 +9,13 @@ import Register from "./Register/Register";
 import CardDetails from "./CardDetails/CardDetails";
 import AuthProvider from "./AuthProvider/AuthProvider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import ErrorPage from "./ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar></Navbar>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
