@@ -57,7 +57,7 @@ const Navbar = () => {
                 {navLinks}
               </ul>
             </div>
-            <h3 className="text-3xl font-bold">
+            <h3 className="text-lg md:text-3xl font-bold">
               AR<span className="text-indigo-500">Events</span>
             </h3>
           </div>
@@ -72,7 +72,9 @@ const Navbar = () => {
                     <img src={user?.photoURL ? user.photoURL : profile} />
                   </div>
                 </label>
-                <p className="font-semibold">{user?.displayName}</p>
+                <p className="text-xs font-medium md:text-lg md:font-semibold">
+                  {user?.displayName}
+                </p>
                 <div>
                   <button
                     onClick={handleSignOut}
