@@ -1,8 +1,7 @@
-# React + Vite
+# Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. In the Home page you can see so many information.
+2. To see the details of event, you must have to Sign in first.
+3. If you don't have an account, you can register an account and can get access to see the details of an event.
+4. You can Sign in by google without register an account.
+5. You can back to home from a event details page by clicking on back to home button.

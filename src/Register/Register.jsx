@@ -13,6 +13,7 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const pic = e.target.pic.value;
     setError(null);
     if (
       password < 6 ||
@@ -27,6 +28,7 @@ const Register = () => {
       .then((res) => {
         updateProfile(res.user, {
           displayName: name,
+          photoURL: pic,
         })
           .then()
           .catch((err) => console.log(err));
@@ -48,7 +50,7 @@ const Register = () => {
             <div className="form-control">
               <label className="label">
                 <span className="label-text">
-                  Name<span className="text-red-700 text-xl">*</span>
+                  Your Name<span className="text-red-700 text-xl">*</span>
                 </span>
               </label>
               <input
@@ -61,8 +63,19 @@ const Register = () => {
             </div>
             <div className="form-control">
               <label className="label">
+                <span className="label-text">Photo URL</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Photo URL"
+                className="input input-bordered"
+                name="pic"
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
                 <span className="label-text">
-                  Email<span className="text-red-700 text-xl">*</span>
+                  Your Email<span className="text-red-700 text-xl">*</span>
                 </span>
               </label>
               <input
@@ -96,11 +109,13 @@ const Register = () => {
               </p>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Sign Up</button>
+              <button className="btn btn-primary bg-gradient-to-r from-sky-500 to-indigo-500">
+                Sign Up
+              </button>
             </div>
             <p className="text-white">
               Already have an account ?{" "}
-              <Link className="text-blue-700 hover:underline" to="/login">
+              <Link className="text-sky-500 hover:underline" to="/login">
                 Sign in
               </Link>
             </p>

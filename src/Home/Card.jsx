@@ -4,7 +4,7 @@ const Card = ({ e }) => {
   const { id, img, event, description } = e;
   return (
     <>
-      <div className="card bg-zinc-300 shadow-xl">
+      <div className="card bg-blue-100 shadow-xl">
         <figure>
           <img src={img} alt="Shoes" />
         </figure>
@@ -13,7 +13,7 @@ const Card = ({ e }) => {
           <p>{description}</p>
           <Link to={`/event/${id}`}>
             <div className="card-actions ">
-              <p className="text-center text-blue-700 hover:underline">
+              <p className="text-center text-indigo-500 hover:underline">
                 Show Details
               </p>
             </div>

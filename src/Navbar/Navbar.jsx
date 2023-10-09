@@ -58,7 +58,7 @@ const Navbar = () => {
               </ul>
             </div>
             <h3 className="text-3xl font-bold">
-              Social <span className="text-blue-700">Events</span>
+              AR<span className="text-indigo-500">Events</span>
             </h3>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -76,7 +76,7 @@ const Navbar = () => {
                 <div>
                   <button
                     onClick={handleSignOut}
-                    className="btn btn-sm bg-blue-700 text-white border-none"
+                    className="btn btn-sm bg-gradient-to-r from-sky-500 to-indigo-500 text-white border-none"
                   >
                     Sign Out
                   </button>
@@ -85,7 +85,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="btn btn-sm bg-blue-700 text-white border-none"
+                className="btn btn-sm bg-gradient-to-r from-sky-500 to-indigo-500 text-white border-none"
               >
                 Sign in
               </Link>

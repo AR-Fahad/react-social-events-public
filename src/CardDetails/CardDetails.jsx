@@ -12,7 +12,7 @@ const CardDetails = () => {
 
   console.log(ev);
   return (
-    <div className="card bg-zinc-300 shadow-xl mt-7">
+    <div className="card bg-blue-100 shadow-xl mt-7">
       <figure className="px-10 pt-10">
         <img src={ev.img} alt="Shoes" className="rounded-xl" />
       </figure>
@@ -24,12 +24,16 @@ const CardDetails = () => {
         <p>Expenses: {ev.cost}</p>
 
         <div className="card-actions">
-          <button className="btn btn-primary">Book Now</button>
+          <button className="btn btn-primary bg-gradient-to-r from-sky-500 to-indigo-500">
+            Book Now
+          </button>
         </div>
         <p className="text-xl font-semibold">Or,</p>
         <div className="card-actions">
           <Link to="/">
-            <button className="btn btn-primary">Back to Home</button>
+            <button className="btn btn-primary bg-gradient-to-r from-sky-500 to-indigo-500">
+              Back to Home
+            </button>
           </Link>
         </div>
       </div>
