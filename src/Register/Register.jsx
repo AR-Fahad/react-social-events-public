@@ -40,9 +40,9 @@ const Register = () => {
       });
   };
   return (
-    <div className="hero bg-base-200 py-5 text-white">
+    <div className="hero bg-white py-5 text-white">
       <div className="hero-content w-full">
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-800">
           <form onSubmit={handleRegister} className="card-body">
             <h3 className="text-white text-center text-2xl font-semibold">
               Create an account

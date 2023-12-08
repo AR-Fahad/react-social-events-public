@@ -26,13 +26,11 @@ const Login = () => {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="hero bg-base-200 py-5">
+    <div className="hero bg-white text-white py-5">
       <div className="hero-content w-full">
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 py-8">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-gray-800 py-8">
           <form onSubmit={handleSignIn} className="card-body">
-            <h3 className="text-white text-center text-2xl font-semibold">
-              Account
-            </h3>
+            <h3 className="text-center text-2xl font-semibold">Account</h3>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -67,14 +65,14 @@ const Login = () => {
                 Sign in
               </button>
             </div>
-            <p className="text-white">
+            <p>
               Don't have an account ?{" "}
               <Link className="text-sky-500 hover:underline" to="/register">
                 Sign up
               </Link>
             </p>
             <br />
-            <p className="text-xl text-white font-semibold text-center">Or,</p>
+            <p className="text-xl font-semibold text-center">Or,</p>
           </form>
           <button
             onClick={googleSignIn}
