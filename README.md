@@ -5,3 +5,4 @@
 3. If you don't have an account, you can register an account and can get access to see the details of an event.
 4. You can Sign in by google without register an account.
 5. You can back to home from a event details page by clicking on back to home button.
+6. Live link: https://earnest-snickerdoodle-655999.netlify.app/
